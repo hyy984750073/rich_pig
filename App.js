@@ -7,7 +7,7 @@
  */
 
 import React from 'react';
-import type {Node} from 'react';
+import type { Node } from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -26,9 +26,13 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+// import { Hello } from './components/Hello.tsx';
+import HelloWorld from './components/HelloWorld.js';
+import FlexBox from './components/FlexBox.js';
+
 /* $FlowFixMe[missing-local-annot] The type annotation(s) required by Flow's
  * LTI update could not be added via codemod */
-const Section = ({children, title}): Node => {
+const Section = ({ children, title }): Node => {
   const isDarkMode = useColorScheme() === 'dark';
   return (
     <View style={styles.sectionContainer}>
@@ -70,8 +74,11 @@ const App: () => Node = () => {
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
-        <Header />
-        <View
+        {/* <Header /> */}
+
+        <HelloWorld />
+        <FlexBox />
+        {/* <View
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
@@ -89,7 +96,7 @@ const App: () => Node = () => {
             Read the docs to discover what to do next:
           </Section>
           <LearnMoreLinks />
-        </View>
+        </View> */}
       </ScrollView>
     </SafeAreaView>
   );

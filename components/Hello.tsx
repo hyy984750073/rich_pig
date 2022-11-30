@@ -1,5 +1,6 @@
 import React from 'react';
-import { Button, StyleSheet, Text, View } from 'react-native';
+// import { Button, StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
 export interface Props {
   name: string;
@@ -7,20 +8,22 @@ export interface Props {
 }
 
 const Hello: React.FC<Props> = (props) => {
-  const [enthusiasmLevel, setEnthusiasmLevel] = React.useState(
-    props.enthusiasmLevel
-  );
+  // const [enthusiasmLevel, setEnthusiasmLevel] = React.useState(
+  //   props.enthusiasmLevel
+  // );
 
-  const onIncrement = () =>
-    setEnthusiasmLevel((enthusiasmLevel || 0) + 1);
-  const onDecrement = () =>
-    setEnthusiasmLevel((enthusiasmLevel || 0) - 1);
+  // const onIncrement = () =>
+  //   setEnthusiasmLevel((enthusiasmLevel || 0) + 1);
+  // const onDecrement = () =>
+  //   setEnthusiasmLevel((enthusiasmLevel || 0) - 1);
 
-  const getExclamationMarks = (numChars: number) =>
-    Array(numChars + 1).join('!');
+  // const getExclamationMarks = (numChars: number) =>
+  //   Array(numChars + 1).join('!');
   return (
-    <View style={styles.root}>
-      <Text style={styles.greeting}>
+    // <View style={styles.root}>
+    <View>
+      <Text>1234567</Text>
+      {/* <Text style={styles.greeting}>
         Hello{' '}
         {props.name + getExclamationMarks(enthusiasmLevel || 0)}
       </Text>
@@ -43,7 +46,7 @@ const Hello: React.FC<Props> = (props) => {
             color="blue"
           />
         </View>
-      </View>
+      </View> */}
     </View>
   );
 };
