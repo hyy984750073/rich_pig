@@ -5,7 +5,7 @@ export default class index extends Component {
     // const [value, onChangeText] = React.useState('Useless Placeholder');
     render() {
         return (
-            <View style={styles.h1, styles.container}>
+            <View style={[styles.h1, styles.container]}>
                 <Text>Hello World</Text>
                 <TextInput
                     placeholder='请输入用户名'
