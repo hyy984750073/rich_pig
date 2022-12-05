@@ -27,8 +27,6 @@ export default function App() {
     <NavigationContainer>
       <Tab.Navigator
         screenOptions={({ route }) => ({
-          tabBarPosition: 'bottom',
-          showIcon: true,
           tabBarIcon: ({ focused, color, size }) => {
             let iconName;
 
