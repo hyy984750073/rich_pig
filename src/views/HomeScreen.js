@@ -1,10 +1,10 @@
 import * as React from 'react'
 // import { Text, View } from 'react-native'
-import MyTabs from '../route/MyTabs.js'
+import MyOrderTabs from '../route/MyOrderTabs.js'
 
 function HomeScreen() {
   return (
-    <MyTabs />
+    <MyOrderTabs />
     // <>
     //   <MyTabs />
     //   <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>

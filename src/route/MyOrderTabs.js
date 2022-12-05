@@ -19,16 +19,17 @@ function SettingsScreen() {
 
 const Tab = createMaterialTopTabNavigator();
 
-function MyTabs() {
+function MyOrderTabs() {
   return (
     <Tab.Navigator>
-      <Tab.Screen name="我的" component={MyScreen} />
-      <Tab.Screen name="Settings" component={SettingsScreen} />
-      <Tab.Screen name="设置2" component={SettingsScreen} />
-      <Tab.Screen name="设置3" component={SettingsScreen} />
+      <Tab.Screen name="全部" component={MyScreen} />
+      <Tab.Screen name="待付款" component={SettingsScreen} />
+      <Tab.Screen name="待发货" component={SettingsScreen} />
+      <Tab.Screen name="待收货" component={SettingsScreen} />
+      <Tab.Screen name="待评价" component={SettingsScreen} />
     </Tab.Navigator>
   );
 }
 
 // 实现swiper切换
-export default MyTabs;
+export default MyOrderTabs;
