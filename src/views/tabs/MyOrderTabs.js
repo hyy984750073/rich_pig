@@ -9,7 +9,7 @@ function MyScreen() {
   );
 }
 
-function SettingsScreen({Navigator, route}) {
+function SettingsScreen({ Navigator, route }) {
   const { title } = route.params;
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>

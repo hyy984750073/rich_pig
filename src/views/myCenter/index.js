@@ -1,5 +1,5 @@
-import * as React from 'react'
-import { Text, View } from 'react-native'
+import * as React from 'react';
+import { Text, View } from 'react-native';
 
 function MyCenterScreen() {
   return (
@@ -9,4 +9,4 @@ function MyCenterScreen() {
   );
 }
 
-export default MyCenterScreen
+export default MyCenterScreen;
