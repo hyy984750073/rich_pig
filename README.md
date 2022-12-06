@@ -12,3 +12,21 @@
 *注意：若是运行npm run start遇到以下提示，则使用npm run android
 warn No apps connected. Sending "reload" to all React Native apps failed. Make sure your app is running in the simulator or
 on a phone connected via USB.
+
+## 使用icon图标：react-native-vector-icons
+https://oblador.github.io/react-native-vector-icons/
+1、安装：npm i react-native-vector-icons -D
+2、项目中引入：import Ionicons from 'react-native-vector-icons/Ionicons'
+3、使用：<Ionicons name="ios-logo-snapchat" size={80} color={'#ff0000'} />
+
+有可能还需要做以下配置：
+1、打开：rich_pig\android\app\build.gradle
+2、添加：
+:::demo
+```html
+project.ext.vectoricons = [
+    iconFontNames: [ 'MaterialIcons.ttf', 'EvilIcons.ttf', 'Ionicons.ttf', 'AntDesign.ttf', 'MaterialCommunityIcons.tff' ]
+]
+apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
+```
+:::
