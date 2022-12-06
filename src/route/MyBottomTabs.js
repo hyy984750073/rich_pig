@@ -3,6 +3,7 @@ import { Text, View } from 'react-native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import HomeScreen from '../views/HomeScreen.js'
+import MyCenterScreen from '../views/myCenter/index.js'
 
 function SettingsScreen() {
   return (
@@ -22,12 +23,14 @@ function MyBottomTabs() {
         tabBarIcon: ({ focused, color, size }) => {
           let iconName;
 
-          if (route.name === 'Home') {
+          if (route.name === '首页') {
             iconName = focused
               ? 'ios-home'
               : 'ios-home-outline';
-          } else if (route.name === 'Settings') {
+          } else if (route.name === '设置') {
             iconName = focused ? 'ios-hammer' : 'ios-hammer-outline';
+          } else if (route.name === '我的') {
+            iconName = focused ? 'md-person-sharp' : 'md-person-outline';
           }
 
           return <Ionicons name={iconName} size={size} color={color} />;
@@ -36,8 +39,9 @@ function MyBottomTabs() {
         tabBarInactiveTintColor: 'gray',
       })}
     >
-      <Tab.Screen name="Home" component={HomeScreen} />
-      <Tab.Screen name="Settings" component={SettingsScreen} options={{ tabBarBadge: 3 }} />
+      <Tab.Screen name="首页" component={HomeScreen} />
+      <Tab.Screen name="设置" component={SettingsScreen} options={{ tabBarBadge: 3 }} />
+      <Tab.Screen name="我的" component={MyCenterScreen} />
     </Tab.Navigator>
   )
 }
