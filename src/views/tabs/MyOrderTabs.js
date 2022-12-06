@@ -1,25 +1,25 @@
-import * as React from 'react';
-import { Text, View } from 'react-native';
-import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+import * as React from 'react'
+import { Text, View } from 'react-native'
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs'
 function MyScreen() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       <Text>Home!</Text>
     </View>
-  );
+  )
 }
 
 function SettingsScreen({ Navigator, route }) {
-  const { title } = route.params;
+  const { title } = route.params
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       <Text>Settings!</Text>
       <Text style={{ fontSize: 40 }}>{title}</Text>
     </View>
-  );
+  )
 }
 
-const Tab = createMaterialTopTabNavigator();
+const Tab = createMaterialTopTabNavigator()
 
 function MyOrderTabs() {
   return (
@@ -30,8 +30,8 @@ function MyOrderTabs() {
       <Tab.Screen name="待收货" component={SettingsScreen} initialParams={{ title: '待收货' }} />
       <Tab.Screen name="待评价" component={SettingsScreen} initialParams={{ title: '待评价' }} />
     </Tab.Navigator>
-  );
+  )
 }
 
 // 实现swiper切换
-export default MyOrderTabs;
+export default MyOrderTabs
