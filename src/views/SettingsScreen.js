@@ -1,6 +1,6 @@
-import * as React from 'react'
-import { Text, View } from 'react-native'
-import Ionicons from 'react-native-vector-icons/Ionicons'
+import * as React from 'react';
+import { Text, View } from 'react-native';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 function SettingsScreen() {
   return (
@@ -11,4 +11,4 @@ function SettingsScreen() {
   );
 }
 
-export default SettingsScreen
+export default SettingsScreen;
