@@ -2,8 +2,8 @@ import * as React from 'react'
 import { Text, View } from 'react-native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import Ionicons from 'react-native-vector-icons/Ionicons'
-import HomeScreen from '../views/HomeScreen.js'
-import MyCenterScreen from '../views/myCenter/index.js'
+import HomeScreen from '../HomeScreen.js'
+import MyCenterScreen from '../myCenter/index.js'
 
 function SettingsScreen() {
   return (

@@ -1,6 +1,6 @@
 import * as React from 'react'
 // import { Text, View } from 'react-native'
-import MyOrderTabs from '../route/MyOrderTabs.js'
+import MyOrderTabs from './tabs/MyOrderTabs.js'
 
 function HomeScreen() {
   return (
