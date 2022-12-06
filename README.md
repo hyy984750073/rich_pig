@@ -9,9 +9,12 @@
 
 ## 运行项目（以安卓为例）
 1、命令：npm run android = npm react-native run-android  或者使用  npm run start  =  npm react-native start
-*注意：若是运行npm run start遇到以下提示，则使用npm run android
-warn No apps connected. Sending "reload" to all React Native apps failed. Make sure your app is running in the simulator or
-on a phone connected via USB.
+*注意：若是运行项目遇到以下提示
+warn No apps connected. Sending "reload" to all React Native apps failed. Make sure your app is running in the simulator or on a phone connected via USB.
+1、检查设备是否正常连接（能查到并且显示‘xxxxx  device’）：adb devices
+2、运行（好像没用）：./gradlew clean
+3、运行：adb reverse tcp:8081 tcp:8081
+4、运行：npm run android 或 npm run start
 
 ## 使用icon图标：react-native-vector-icons
 https://oblador.github.io/react-native-vector-icons/
