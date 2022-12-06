@@ -313,6 +313,6 @@ def isNewArchitectureEnabled() {
 }
 
 project.ext.vectoricons = [
-    iconFontNames: [ 'MaterialIcons.ttf', 'EvilIcons.ttf', 'Ionicons.ttf', 'AntDesign.ttf' ]
+    iconFontNames: [ 'MaterialIcons.ttf', 'EvilIcons.ttf', 'Ionicons.ttf', 'AntDesign.ttf', 'MaterialCommunityIcons.tff' ]
 ]
 apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
