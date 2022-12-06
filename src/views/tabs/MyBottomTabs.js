@@ -1,18 +1,9 @@
 import * as React from 'react'
-import { Text, View } from 'react-native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import HomeScreen from '../HomeScreen.js'
 import MyCenterScreen from '../myCenter/index.js'
-
-function SettingsScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Settings!</Text>
-      <Ionicons name="ios-logo-snapchat" size={80} color={'#ff0000'} />
-    </View>
-  );
-}
+import SettingsScreen from '../SettingsScreen.js'
 
 const Tab = createBottomTabNavigator();
 
