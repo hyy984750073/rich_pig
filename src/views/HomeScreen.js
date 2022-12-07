@@ -1,6 +1,6 @@
-import * as React from 'react';
+import * as React from 'react'
 // import { Text, View } from 'react-native'
-import MyOrderTabs from './tabs/MyOrderTabs.js';
+import MyOrderTabs from './tabs/MyOrderTabs.js'
 
 function HomeScreen() {
   return (
@@ -11,7 +11,7 @@ function HomeScreen() {
     //     <Text>Home!</Text>
     //   </View>
     // </>
-  );
+  )
 }
 
-export default HomeScreen;
+export default HomeScreen

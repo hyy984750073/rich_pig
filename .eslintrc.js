@@ -3,6 +3,6 @@ module.exports = {
   extends: '@react-native-community',
   rules: {
     semi: 0,
-    trailingComma: 0
-  }
+    trailingComma: 0,
+  },
 }

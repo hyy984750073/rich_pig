@@ -3,7 +3,7 @@ module.exports = {
   bracketSameLine: true,
   bracketSpacing: true, // 大括号内的首尾需要空格
   singleQuote: true, // 使用单引号, 默认false(在jsx中配置无效, 默认都是双引号)
-  trailingComma: 'none', // 末尾不需要有逗号 none es5 all
+  trailingComma: 'all', // 末尾不需要有逗号 none es5 all
   "endOfLine": "auto", // 结尾是 \n \r \n\r auto
   "printWidth": 180,
   "bracketSpacing": true,   // 对象中的空格 默认true

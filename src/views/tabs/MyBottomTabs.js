@@ -25,7 +25,7 @@ function MyBottomTabs() {
           return <Ionicons name={iconName} size={size} color={color} />
         },
         tabBarActiveTintColor: 'tomato',
-        tabBarInactiveTintColor: 'gray'
+        tabBarInactiveTintColor: 'gray',
       })}>
       <Tab.Screen name="首页" component={HomeScreen} />
       <Tab.Screen name="设置" component={SettingsScreen} options={{ tabBarBadge: 3 }} />
