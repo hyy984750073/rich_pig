@@ -14,11 +14,11 @@ function MyBottomTabs() {
         tabBarIcon: ({ focused, color, size }) => {
           let iconName
 
-          if (route.name === '首页') {
+          if (route.name === 'Home') {
             iconName = focused ? 'ios-home' : 'ios-home-outline'
-          } else if (route.name === '设置') {
+          } else if (route.name === 'Settings') {
             iconName = focused ? 'ios-hammer' : 'ios-hammer-outline'
-          } else if (route.name === '我的') {
+          } else if (route.name === 'My') {
             iconName = focused ? 'md-person-sharp' : 'md-person-outline'
           }
 
@@ -27,9 +27,9 @@ function MyBottomTabs() {
         tabBarActiveTintColor: 'tomato',
         tabBarInactiveTintColor: 'gray',
       })}>
-      <Tab.Screen name="首页" component={HomeScreen} />
-      <Tab.Screen name="设置" component={SettingsScreen} options={{ tabBarBadge: 3 }} />
-      <Tab.Screen name="我的" component={MyCenterScreen} />
+      <Tab.Screen name="Home" component={HomeScreen} options={{ title: '首页' }} />
+      <Tab.Screen name="Settings" component={SettingsScreen} options={{ title: '设置', tabBarBadge: 3 }} />
+      <Tab.Screen name="My" component={MyCenterScreen} options={{ title: '我的' }} />
     </Tab.Navigator>
   )
 }
