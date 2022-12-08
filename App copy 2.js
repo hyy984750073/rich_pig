@@ -102,7 +102,7 @@ function LogoTitle() {
   return (
     <Image
       style={{ width: 38, height: 38 }}
-      source={require('./images/duban.png')}
+      source={require('./assets/images/duban.png')}
     />
   );
 }

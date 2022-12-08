@@ -13,6 +13,7 @@ module.exports = {
           '@views': ['./src/views'],
           '@store': ['./src/redux'],
           '@route': ['./src/route'],
+          '@assets': ['./assets'],
         },
       },
     ],
