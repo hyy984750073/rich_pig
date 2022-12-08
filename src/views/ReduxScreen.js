@@ -1,13 +1,13 @@
 import * as React from 'react'
 import { View, Button, Text, StyleSheet } from 'react-native'
 import { useDispatch, useSelector } from 'react-redux'
-import { increment, decrement } from '@store/actions/Counter.js'
+import { increment, decrement } from 'redux/actions/counter.js'
 
 function ReduxScreen({ route }) {
   const { title } = route.params
   const dispatch = useDispatch()
   const num = useSelector(state => {
-    return state.Counter.num
+    return state.counter.num
   })
   return (
     <View style={styles.centerBox}>

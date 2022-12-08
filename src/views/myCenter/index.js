@@ -3,10 +3,10 @@ import React, { Component } from 'react'
 import { Text, View, Button, StyleSheet } from 'react-native'
 
 import { connect } from 'react-redux'
-import { increment, decrement } from '@store/actions/Counter'
+import { increment, decrement } from 'redux/actions/counter'
 const mapStateToProps = state => {
   return {
-    num: state.Counter.num,
+    num: state.counter.num,
   }
 }
 
