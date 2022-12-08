@@ -11,9 +11,10 @@ function ReduxScreen({ route }) {
   })
   return (
     <View style={styles.centerBox}>
-      <Text style={styles.fontSize30}>函数组件：{title}</Text>
+      <Text style={styles.fontSize30}>{title}</Text>
+      <Text style={styles.fontSize30}>函数组件</Text>
       <Button title="加加" onPress={() => dispatch(increment(1))} />
-      <Text>{num}</Text>
+      <Text style={styles.fontSize30}>状态管理num：{num}</Text>
       <Button title="减减" onPress={() => dispatch(decrement(1))} />
     </View>
   )
