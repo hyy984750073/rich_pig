@@ -2,6 +2,7 @@ import * as React from 'react'
 import { Text, View } from 'react-native'
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs'
 import OrderScreen from '@views/OrderScreen.js'
+import ReduxScreen from '@views/ReduxScreen.js'
 
 function MyScreen() {
   return (
@@ -28,7 +29,7 @@ function MyOrderTabs() {
     <Tab.Navigator>
       <Tab.Screen name="全部" component={MyScreen} />
       <Tab.Screen name="待付款" component={OrderScreen} initialParams={{ title: '待付款' }} />
-      <Tab.Screen name="待发货" component={SettingsScreen} initialParams={{ title: '待发货' }} />
+      <Tab.Screen name="待发货" component={ReduxScreen} initialParams={{ title: '待发货' }} />
       <Tab.Screen name="待收货" component={SettingsScreen} initialParams={{ title: '待收货' }} />
       <Tab.Screen name="待评价" component={SettingsScreen} initialParams={{ title: '待评价' }} />
     </Tab.Navigator>
