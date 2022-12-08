@@ -7,10 +7,13 @@ module.exports = {
         root: ['./src'],
         extensions: ['.ios.js', '.android.js', '.js', '.ts', '.tsx', '.json'],
         alias: {
-          'tests': ['./tests/'],
-          '@components': './src/components'
-        }
-      }
-    ]
-  ]
-};
+          tests: ['./tests/'],
+          '@components': './src/components',
+          '@views': ['./src/views'],
+          '@store': ['./src/redux'],
+          '@route': ['./src/route'],
+        },
+      },
+    ],
+  ],
+}

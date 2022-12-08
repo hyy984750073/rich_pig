@@ -16,6 +16,9 @@
                   "*": ["src/*"],
                    "tests": ["tests/*"],
                    "@components/*": ["src/components/*"],
+                   "@views/*": ["src/views/*"],
+                   "@store/*": ["src/redux/*"],
+                   "@route/*": ["src/route/*"],
                  },
     },
     "exclude": [
