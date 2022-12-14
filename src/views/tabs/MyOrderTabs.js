@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Text, View } from 'react-native'
+import { Text, View, StyleSheet } from 'react-native'
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs'
 import OrderScreen from '@views/OrderScreen.js'
 import ReduxScreen from '@views/ReduxScreen.js'
@@ -7,7 +7,7 @@ import ReduxSecondDemo from '@views/ReduxSecondDemo.js'
 
 function MyScreen() {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+    <View style={styles.centerBox}>
       <Text>Home!</Text>
     </View>
   )
@@ -16,9 +16,9 @@ function MyScreen() {
 function SettingsScreen({ Navigator, route }) {
   const { title } = route.params
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+    <View style={styles.centerBox}>
       <Text>Settings!</Text>
-      <Text style={{ fontSize: 40 }}>{title}</Text>
+      <Text style={[styles.bigFont]}>{title}</Text>
     </View>
   )
 }
@@ -39,3 +39,14 @@ function MyOrderTabs() {
 
 // 实现swiper切换
 export default MyOrderTabs
+
+const styles = StyleSheet.create({
+  centerBox: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  bigFont: {
+    fontSize: 40,
+  },
+})
