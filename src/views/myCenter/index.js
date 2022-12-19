@@ -13,7 +13,7 @@ const mapStateToProps = state => {
 class MyCenterScreen extends Component {
   render() {
     const ppp = this.props
-    console.log(ppp)
+    // console.log(ppp)
     return (
       <View style={styles.centerBox}>
         <Text>个人中心</Text>
