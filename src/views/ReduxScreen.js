@@ -8,17 +8,17 @@ import store from '@store/store.js'
 function ReduxScreen({ route }) {
   const { title } = route.params
   const dispatch = useDispatch()
-  const num = useSelector(state => {
-    return state.counter.num
-  })
-  const user = useSelector(state => {
-    return state.user
-  })
-  // const [isLoading] = useState(false)
+  const num = useSelector(state => state.counter.num)
+  const user = useSelector(state => state.user)
+  const [isLoading, setLoading] = useState(true)
   // dispatch(fetchUsers()) // 放在这里就会一开始就请求，有点浪费资源
   React.useEffect(() => {
     store.dispatch(fetchUsers())
-  })
+    // if (user.length) {
+    setLoading(false)
+    // }
+    console.log(Math.random())
+  }, [])
   return (
     <View style={styles.centerBox}>
       <Text style={styles.fontSize30}>{title}</Text>
@@ -26,16 +26,7 @@ function ReduxScreen({ route }) {
       <Button title="加加" onPress={() => dispatch(increment(1))} />
       <Text style={styles.fontSize30}>状态管理num：{num}</Text>
       <Button title="减减" onPress={() => dispatch(decrement(1))} />
-      <FlatList
-        data={user}
-        keyExtractor={({ id }, index) => id}
-        renderItem={({ item }) => (
-          <Text>
-            {item.title}, {item.releaseYear}
-          </Text>
-        )}
-      />
-      {/* {isLoading ? (
+      {isLoading ? (
         <ActivityIndicator />
       ) : (
         <FlatList
@@ -43,11 +34,11 @@ function ReduxScreen({ route }) {
           keyExtractor={({ id }, index) => id}
           renderItem={({ item }) => (
             <Text>
-              {item.title}, {item.releaseYear}
+              啦啦啦啦啦啦：{item.title}, {item.releaseYear}
             </Text>
           )}
         />
-      )} */}
+      )}
     </View>
   )
 }

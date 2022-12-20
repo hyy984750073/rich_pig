@@ -30,7 +30,11 @@ class MyCenterScreen extends Component {
 export default connect(mapStateToProps, { increment, decrement })(MyCenterScreen)
 
 const styles = StyleSheet.create({
-  centerBox: { flex: 1, justifyContent: 'center', alignItems: 'center' },
+  centerBox: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   fontSize30: {
     fontSize: 30,
   },
