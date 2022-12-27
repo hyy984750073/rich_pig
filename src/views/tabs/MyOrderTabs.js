@@ -4,6 +4,7 @@ import { createMaterialTopTabNavigator } from '@react-navigation/material-top-ta
 import OrderScreen from '@views/OrderScreen.js'
 import ReduxScreen from '@views/ReduxScreen.js'
 import ReduxSecondDemo from '@views/ReduxSecondDemo.js'
+import OrderListScreen from '@views/OrderListScreen.js'
 
 function MyScreen() {
   return (
@@ -28,7 +29,7 @@ const Tab = createMaterialTopTabNavigator()
 function MyOrderTabs() {
   return (
     <Tab.Navigator>
-      <Tab.Screen name="全部" component={MyScreen} />
+      <Tab.Screen name="全部" component={OrderListScreen} />
       <Tab.Screen name="待付款" component={OrderScreen} initialParams={{ title: '待付款' }} />
       <Tab.Screen name="待发货" component={ReduxScreen} initialParams={{ title: '待发货' }} />
       <Tab.Screen name="待收货" component={ReduxSecondDemo} initialParams={{ title: '待收货' }} />
