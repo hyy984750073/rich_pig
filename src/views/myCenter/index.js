@@ -1,35 +1,49 @@
-// import * as React from 'react'
-import React, { Component } from 'react'
-import { Text, View, Button, StyleSheet, Image } from 'react-native'
+import * as React from 'react'
+import { Text, View, Button, StyleSheet, Image, SafeAreaView } from 'react-native'
 
-import { connect } from 'react-redux'
-import { increment, decrement } from 'redux/actions/counter'
-const mapStateToProps = state => {
-  return {
-    num: state.counter.num,
-  }
+const Statics = ({ name, num }) => {
+  return (
+    <View style={[styles.rowDirection, styles.marginLeft20, { marginTop: 12 }]}>
+      <Text style={styles.staticNum}>{num}</Text>
+      <Text>{name}</Text>
+    </View>
+  )
 }
 
-class MyCenterScreen extends Component {
-  render() {
-    const ppp = this.props
-    // console.log(ppp)
-    return (
-      <View style={styles.centerBox}>
-        <Text>个人中心</Text>
-        <Text>类组件</Text>
-        <Image style={styles.imageStyle} source={require('@assets/images/duban.png')} />
-        <Button title={'加运算'} onPress={() => this.props.increment(1)} />
-        <Text style={styles.fontSize30}>状态管理num：{this.props.num}</Text>
-        <Button title={'减运算'} onPress={() => this.props.decrement(1)} />
+function MyCenterScreen() {
+  return (
+    <SafeAreaView>
+      <View style={[styles.avatarBox]}>
+        <Image style={styles.avatar} source={require('@assets/images/duban.png')} />
+
+        <View style={styles.introBox}>
+          <Text style={styles.nickname}>Pumpkin</Text>
+          <Text>ID: 123456789</Text>
+        </View>
+
+        <View style={[styles.rowDirection]}>
+          <Statics name="获赞" num={23} />
+          <Statics name="消息" num={66} />
+          <Statics name="关注" num={18} />
+        </View>
       </View>
-    )
-  }
+    </SafeAreaView>
+  )
 }
 
-export default connect(mapStateToProps, { increment, decrement })(MyCenterScreen)
+export default MyCenterScreen
 
 const styles = StyleSheet.create({
+  avatarBox: {
+    marginTop: 50,
+    // marginLeft: 10,
+    // marginRight: 10,
+    backgroundColor: '#fff',
+    borderRadius: 12,
+    paddingLeft: 12,
+    paddingRight: 12,
+    paddingBottom: 12,
+  },
   centerBox: {
     flex: 1,
     justifyContent: 'center',
@@ -38,8 +52,29 @@ const styles = StyleSheet.create({
   fontSize30: {
     fontSize: 30,
   },
-  imageStyle: {
+  avatar: {
     width: 80,
     height: 80,
+    borderRadius: 80,
+    marginTop: -40,
+    marginLeft: 20,
+  },
+  introBox: {
+    flexDirection: 'row',
+  },
+  nickname: {
+    marginRight: 36,
+    fontWeight: 'bold',
+  },
+  staticNum: {
+    fontWeight: 'bold',
+    color: '#333',
+    marginRight: 2,
+  },
+  rowDirection: {
+    flexDirection: 'row',
+  },
+  marginLeft20: {
+    marginRight: 26,
   },
 })
