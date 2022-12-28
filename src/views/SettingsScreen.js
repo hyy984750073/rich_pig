@@ -36,12 +36,17 @@ function SettingsScreen({ screenName, route }) {
       <Text>------</Text>
       <Button title="Create post" color="red" onPress={() => navigation.navigate('CreatePost', { name: '写邮件' })} />
       <Text style={[styles.fontSize30, { margin: 10 }]}>Post: {route.params?.post}</Text>
+
       <Button title="Update the title" onPress={() => navigation.setOptions({ title: 'My home Updated!' })} />
       <Text style={styles.fontSize30}>------</Text>
-      <Button title={`Go to ${screenName}`} onPress={() => navigation.navigate(screenName)} />
+
+      {/* <Button title={`Go to ${screenName}`} onPress={() => navigation.navigate(screenName)} /> */}
       <Text>------</Text>
+
       <Button title={'Click me--Count'} onPress={() => setCount(count + 1)} />
       <Text>You clicked {count} times</Text>
+
+      <Button title={'Go to One'} onPress={() => navigation.navigate('One')} />
     </View>
   )
 }
