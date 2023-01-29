@@ -33,3 +33,8 @@ project.ext.vectoricons = [
 apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
 ```
 :::
+
+## 打包发布，生成APK包
+1、切换到android目录下：cd android
+2、在终端输入命令行：./gradlew assembleRelease
+注意：rich_pig\android\gradle.properties   的MYAPP_RELEASE_STORE_PASSWORD和MYAPP_RELEASE_KEY_PASSWORD的密码在打包APK的时候才改，平时不发布到github上
